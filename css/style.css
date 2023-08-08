@@ -165,7 +165,7 @@ h4{
 }
 
 .object-cover img{
-    /* position: absolute; */
+     /* position: absolute;  */
     object-fit: cover;
     width: var(--percent100);
     height: var(--percent100);
@@ -470,6 +470,51 @@ form.search button{
 form.search button:hover{
     background-color: var(--dark-color);
 }
+
+.slider > div > .wrapper {
+    width: calc(100% - (300px + 2em));
+    margin-left: auto;
+}
+
+.slider .item {
+    position: relative;
+    height: 474px;
+}
+
+.slider .image {
+    position: relative;
+    height: 100%;
+}
+
+.slider .text-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 10% 10%;
+    z-index: 1;
+}
+
+
+.primary-button {
+    margin-top: 10px;
+}
+
+.brands .wrapper{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+}
+
+.brands .item img{
+    opacity: .25;
+    transition: opacity .3s;
+}
+.brands .item a:hover img{
+    opacity: 1;
+}
+
+
 
 
 /* RESPOSNIVE */
