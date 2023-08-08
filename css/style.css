@@ -231,6 +231,22 @@ h4{
     color: var(--light-text-color);
 }
 
+.btn{
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    width: 100px;
+    padding: 10px 30px ;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 
 
 header li a{
