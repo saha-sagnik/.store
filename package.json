@@ -1,5 +1,23 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "vue": "^3.3.4"
+=======
+  "name": "wallmart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.4.2",
+    "path": "^0.12.7"
+>>>>>>> e55a65a7c52fabcf749ffc87b20aa1e6809a4b89
   }
 }
