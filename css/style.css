@@ -182,8 +182,8 @@ h4{
     font-size: var(--font-small);
     padding: 0.9em 2em;
     height: auto;
-    width: fit-content;
-    border-radius: 2em;
+    width: 100px;
+    border-radius: 5px;
     transition: var(--trans-background-color);
 }
 
@@ -579,7 +579,7 @@ form.search button:hover{
     }
 
     nav .mega .women-brands li{
-        min-width: 100px;
+        min-width: 10 0px;
     }
     nav .mega .view-all{
         margin-top: 1em;
@@ -653,12 +653,12 @@ form.search button:hover{
         background-repeat: no-repeat;
         background-size: auto;
     }
-    /* display the first sub menu */
-    /* .dpt-menu .mega{
+    /* display the first sub menu */ */
+    .dpt-menu .mega{
         display: block;
-    } */
+    }
 
-    /* .dpt-menu .beauty ul{
+     .dpt-menu .beauty ul{
         background-image: url(/assets/menu/menu_bg1.jpg) ;
     }
 
@@ -691,6 +691,6 @@ form.search button:hover{
     }
      .dpt-menu .has-child:hover .mega{
         display: flex;
-    }  */
+    } 
 
 }
