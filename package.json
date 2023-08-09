@@ -13,9 +13,7 @@
   "description": "While studying at [High School](https://kyberna.cz), I taught freshmen the basics of the web, so we built apps using the basics and the Vue.js framework.",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
+  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }
