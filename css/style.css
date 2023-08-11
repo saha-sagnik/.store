@@ -733,6 +733,58 @@ form.search button:hover{
     font-weight: 400px;
 }
 
+.breadcrumb li:last-child{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--light-text-color);
+}
+
+.products.one .item{
+    flex-direction: column;
+    
+}
+
+.products.one .price .discount{
+    font-size: 1em;
+    font-weight: var(--fw7);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    padding: 1em;
+    z-index: 2;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: var(--percent50);
+    margin: 0.5em;   
+}
+
+.product.one :where(.big-image, .small-image){
+    overflow: hidden;
+}
+
+.products.one .big-image{
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.products.one :where(.big-image, .small-image) img{
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+
+.products.one .thumbnail-show{
+    position: relative;
+    width: 130px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 2em 0;
+}
+
 
 
 
@@ -742,6 +794,13 @@ form.search button:hover{
     .products .price .current{
         font-size: 1.25em;
 
+    }
+    .products.main .item{
+        flex: 0 0 33.33%;
+    }
+    .products.one .row{
+        flex: 0 0 50%;
+        width: 50%;
     }
 }
 
