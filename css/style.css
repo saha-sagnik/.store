@@ -2984,3 +2984,7 @@ form.search button:hover{
     }
 
 }
+
+.hide{
+    display: none;
+}
