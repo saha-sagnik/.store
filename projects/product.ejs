@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product-Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -19,7 +21,7 @@
                         <div class="left">
                             <ul class="flexitem main-links">
                                 <li><a href="/chat-room/index.html">Chatroom</a></li>
-                                <li><a href="#">Featured Products</a></li>
+                                <li><a href="#">VirtuTalk</a></li>
                                 <li><a href="#">Wishlist</a></li>
                             </ul>
                         </div>
@@ -242,16 +244,19 @@
                             Add to Cart <i class = "fas fa-shopping-cart"></i>
                           </button>
                           <button type = "button" class = "btn">Wishlist</button>
-                          <button type = "button" style="background-color: gold;" class = "btn">Share</button>
+                          <button type="button" style="background-color: gold;" class="btn" @click="toggleChatbox">Share</button>
                         </div>
               
-                        <div class = "social-links">
-                          <p>Share At: </p>
-                          <a href = "#">
-                            <i class = "fab fa-facebook-f"></i>
-                          </a>
-                          
+                        <div class="social-links">
+                            <p>Share At: </p>
+                            <a href="#" @click="toggleChatbox">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <div id="chatbox" class="chatbox">
+                                <!-- Your chatbox content here -->
+                            </div>
                         </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -279,6 +284,17 @@ function slideImage(){
 }
 
 window.addEventListener('resize', slideImage);
+
+
+shareButton.addEventListener("click", async () => {
+  try {
+    await navigator.share({ title: "Example Page", url: "projects\product.ejs" });
+    console.log("Data was shared successfully");
+  } catch (err) {
+    console.error("Share failed:", err.message);
+  }
+});
+
 
 
             </script>

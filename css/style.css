@@ -787,7 +787,7 @@ form.search button:hover{
 
 @media screen and (min-width: 481px) {
     .products.main .item{
-        flex: 0 0 50%;
+        flex: 0 0 50%   ;
     }
 }
 
