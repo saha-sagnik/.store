@@ -27,6 +27,10 @@
     --trans-color: color .3s;
 }
 
+.hide{
+    display: none;
+}
+
 *{
     margin:0;
     padding:0;
@@ -519,7 +523,7 @@ form.search button:hover{
 
 /* RESPOSNIVE */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1080px) {
     .container{
         padding: 0 2em;
     }

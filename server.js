@@ -27,6 +27,25 @@ async function connectToMongoDB() {
 }
 connectToMongoDB();
 
+async function addListItem(userId, proId, quantity) {
+    try {
+        const user = await User.findById(userId);
+        if (user) {
+            user.list.items.push({
+                proId: proId,
+                quantity: quantity
+            });
+            await user.save();
+            console.log("Added item to list:", proId);
+        } else {
+            console.log("User not found");
+        }
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+
 async function add(info) {
   console.log(info);
   const user = new User({
@@ -40,6 +59,8 @@ async function add(info) {
     }).catch((error) => {
       console.log(error.message);
     });
+
+    addListItem('64d21667d50342818794e187')
 }
 
 async function check(name, password) {

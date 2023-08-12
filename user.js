@@ -11,6 +11,12 @@ const userSchema = new mongoose.Schema({
     },
     wishList:{
         type : [String]
+    },
+    list:{
+       item:[{
+        proId:String,
+        quantity:String
+       }]
     }
 })
 
