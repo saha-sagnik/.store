@@ -785,6 +785,12 @@ form.search button:hover{
     margin: 0 2em 0;
 }
 
+@media screen and (min-width: 481px) {
+    .products.main .item{
+        flex: 0 0 50%;
+    }
+}
+
 
 
 
