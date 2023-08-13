@@ -5,6 +5,9 @@ const session = require('express-session');
 const app = express();
 const port = 4500 || process.env.PORT;
 
+const http = require('http');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
 const User = require('./user');
 
 // Set up session middleware
@@ -81,6 +84,15 @@ app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "projects"));
 app.use(express.static(path.join(__dirname)));
+
+const proxy = createProxyMiddleware({
+  target: 'http://localhost:3000', // Target server where requests will be forwarded
+  changeOrigin: true, // Change the 'Host' header to match the target server
+});
+
+// Use the proxy middleware when the path matches "/virtueTalk"
+app.use('/virtueTalk', proxy);
+
 
 app.get('/', (req, res) => {
   res.render('index');
