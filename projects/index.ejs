@@ -393,10 +393,10 @@
                                             <p>Offer ends at</p>
                                             <ul class="flexcenter">
                                         
-                                                    <li>1</li>
-                                                    <li>15</li>
-                                                    <li>27</li>
-                                                    <li>60</li>
+                                                    <li id="day">1</li>
+                                                    <li id="hour">15</li>
+                                                    <li id="minute">27</li>
+                                                    <li id="second">60</li>
                                                 
                                             </ul>
                                         </div>
@@ -821,11 +821,11 @@
                     <li><a href="#">Purchase</a></li>
                   </ul>
                   <ul class="box">
-                    <li class="link_name">Courses</li>
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Photoshop</a></li>
+                    <li class="link_name">Quick Links</li>
+                    <li><a href="#">Chatroom</a></li>
+                    <li><a href="#">VirtuTalk</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
                   </ul>
                   <ul class="box input-box">
                     <li class="link_name">Subscribe</li>
@@ -847,5 +847,32 @@
     </div>
   <script src="/css/main.js"></script>  
   <script src="/css/shoppingcart.js"></script>
+  <script>
+    let countDate = new Date('August 17, 2023 00:00:00').getTime();
+function CountDown() {
+
+let now = new Date().getTime();
+let gap = countDate - now; // Added "let" before gap
+
+let second = 1000;
+let minute = second * 60;
+let hour = minute * 60;
+let day = hour * 24; // Changed hour * 60 to hour * 24
+
+let d = Math.floor(gap / day);
+let h = Math.floor((gap % day) / hour); // Changed hour * 60 to hour
+let m = Math.floor((gap % hour) / minute); // Changed hour * 60 to hour
+let s = Math.floor((gap % minute) / second); // Changed hour * 60 to hour
+
+document.getElementById('day').innerText = d;
+document.getElementById('hour').innerText = h;
+document.getElementById('minute').innerText = m;
+document.getElementById('second').innerText = s;
+
+setTimeout(CountDown, 1000); // Changed setInterval to setTimeout
+}
+
+CountDown(); 
+  </script>
 </body>
 </html>
