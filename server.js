@@ -134,6 +134,10 @@ app.get('/notification',(req,res)=>{
   res.render('notification')
 })
 
+app.get('/myprofile',(req,res)=>{
+  res.render('profile')
+})
+
 app.get('/api/data', (req, res) => {
   const user_name = req.session.user_name; // Retrieve user_name from session
   res.json(user_name);
