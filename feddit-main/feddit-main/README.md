@@ -42,3 +42,7 @@ Session cookie example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDk
 
 # License
 Apache-2.0
+
+
+DB='mongodb+srv://sbmunnu:munnu@mongo.mzaad3h.mongodb.net/wallmart?retryWrites=true&w=majority'
+Encryption_Key='K'
