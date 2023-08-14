@@ -244,7 +244,7 @@
                             Add to Cart <i class = "fas fa-shopping-cart"></i>
                           </button>
                           <button type = "button" class = "btn">Wishlist</button>
-                          <button type="button" style="background-color: gold;" class="btn" @click="toggleChatbox">Share</button>
+                          <button type="button" style="background-color: gold;" class="btn" onclick=addToShared()>Share</button>
                         </div>
               
                         <div class="social-links">
@@ -261,42 +261,8 @@
                     </div>
                   </div>
               
-                  
-                  
             </main>
-            <script>
-                const imgs = document.querySelectorAll('.img-select a');
-const imgBtns = [...imgs];
-let imgId = 1;
-
-imgBtns.forEach((imgItem) => {
-    imgItem.addEventListener('click', (event) => {
-        event.preventDefault();
-        imgId = imgItem.dataset.id;
-        slideImage();
-    });
-});
-
-function slideImage(){
-    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
-
-    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
-}
-
-window.addEventListener('resize', slideImage);
-
-
-shareButton.addEventListener("click", async () => {
-  try {
-    await navigator.share({ title: "Example Page", url: "projects\product.ejs" });
-    console.log("Data was shared successfully");
-  } catch (err) {
-    console.error("Share failed:", err.message);
-  }
-});
-
-
-
-            </script>
+            <script src="/css/share.js"></script>
+            
 </body>
 </html>

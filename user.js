@@ -14,9 +14,13 @@ const userSchema = new mongoose.Schema({
     },
     list:{
        item:[{
+        listName:String,
         proId:String,
         quantity:String
        }]
+    },
+    shared:{
+        type:[String]
     }
 })
 
