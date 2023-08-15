@@ -388,12 +388,32 @@ Vue.component("chat", {
                             type: 'from',
                         },
                         {
-                            message: 'This is my favorite quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quibusdam ipsum laborum! Quasi, ratione quaerat voluptatum a impedit animi alias deserunt tempore facilis voluptates dolorum eveniet ipsum, odit, numquam quae?',
+                            message: 'Any updates?',
                             type: 'from',
                         },
                         {
-                            message: 'Never write to me again, you do not care 🐷',
+                            message: 'Hi Ajay, nothing much!',
                             type: 'to',
+                        }
+                    ]
+                },
+                {
+                    name: 'Atrik Ghosh',
+                    image: 'images/users/u3.png',
+                    online: true,
+                    emoji: "💪",
+                    messages: [{
+                            message: 'Hi',
+                            type: 'to',
+                        },
+                        {
+                            message: 'Whats up',
+                            type: 'to',
+                        },
+                        {
+                            message: 'Check out this cool shoes:',
+                            type: 'to',
+                           
                         }
                     ]
                 },
