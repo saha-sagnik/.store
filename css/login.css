@@ -67,6 +67,31 @@ body{
     font-weight: 600;
 }
 
+/* Reset default button styles */
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Styling for the login button */
+  .login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for the button */
+    color: white; /* Text color */
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  
+
 .form .title::before{
     content: '';
     position: absolute;
