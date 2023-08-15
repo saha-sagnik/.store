@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ====== Fontawesome CDN Link ====== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <!-- ====== Google Font Import - Poppins ====== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ====== Your Custom CSS ====== -->
+    <link rel="stylesheet" href="/css/list.css">
+
+    <title>Friend's list</title> 
+</head>
+
+<body>
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+            <div class="message">
+                <span class="text text-1">Sent Succesfully!</span>
+                <span class="text text-2">Link has been shared!</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="progress"></div>
+    </div>
+    
+    <div class="list">
+        <div style="padding: 50px;">
+            <h1>Your Friend's list</h1>
+        </div>
+        <div>
+            <h3 style="padding-bottom: 30px;">Ajay</h3>
+            <button>Send</button>
+        </div>
+        <div>
+            <h3 style="padding-bottom: 30px; padding-top: 15px;">Atrik Ghosh</h3>
+            <button>Send</button>
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector("button"),
+      toast = document.querySelector(".toast")
+      closeIcon = document.querySelector(".close"),
+      progress = document.querySelector(".progress");
+
+      let timer1, timer2;
+
+      button.addEventListener("click", () => {
+        toast.classList.add("active");
+        progress.classList.add("active");
+
+        timer1 = setTimeout(() => {
+            toast.classList.remove("active");
+        }, 5000); //1s = 1000 milliseconds
+
+        timer2 = setTimeout(() => {
+          progress.classList.remove("active");
+        }, 5300);
+      });
+      
+      closeIcon.addEventListener("click", () => {
+        toast.classList.remove("active");
+        
+        setTimeout(() => {
+          progress.classList.remove("active");
+        }, 300);
+
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      });
+    </script>
+</body>
+</html>
