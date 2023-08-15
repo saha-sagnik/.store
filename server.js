@@ -68,7 +68,8 @@ async function add(info) {
 
 async function check(name, password) {
   try {
-    const user = await User.findOne({ name: name });
+    const user = await User.findOne({ email: name });
+    console.log(user)
     if (user && password === user.password) {
       return true;
     } else {
